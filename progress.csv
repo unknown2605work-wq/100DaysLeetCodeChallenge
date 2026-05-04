@@ -1,0 +1,13 @@
+Problem Number,Problem Name,Difficulty,Status,Date Completed,Notes
+0001,Two Sum,Easy,Completed,2026-05-04,HashMap approach
+0035,Search Insert Position,Easy,Completed,2026-05-04,Binary search
+0048,Rotate Image,Medium,Completed,2026-05-04,In-place rotation
+0058,Length of Last Word,Easy,Completed,2026-05-04,String manipulation
+0066,Plus One,Easy,Completed,2026-05-04,Array increment
+0136,Single Number,Easy,Completed,2026-05-04,XOR bitwise operation
+0217,Contains Duplicate,Easy,Completed,2026-05-04,HashSet approach
+0219,Contains Duplicate II,Easy,Completed,2026-05-04,Sliding window
+0509,Fibonacci Number,Easy,Completed,2026-05-04,Dynamic programming
+0788,Rotated Digits,Medium,Completed,2026-05-04,Digit DP
+0796,Rotate String,Easy,Completed,2026-05-04,String rotation
+1137,N-th Tribonacci Number,Easy,Completed,2026-05-04,Dynamic programming
