@@ -1,0 +1,50 @@
+name: Auto Update Progress CSV
+
+on:
+  push:
+    paths:
+      - '**.py'
+      - '**.java'
+      - '**.cpp'
+      - '**.js'
+      - '**.ts'
+      - '**.go'
+      - '**.rs'
+      - '**.c'
+    branches:
+      - main
+      - master
+
+jobs:
+  update-progress:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v3
+      
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: 🔍 Scan and Update Progress
+        run: python update_progress.py
+      
+      - name: ✅ Check if changes exist
+        id: verify-changes
+        run: |
+          if git diff --quiet progress.csv; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: 📤 Commit and Push Updates
+        if: steps.verify-changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add progress.csv
+          git commit -m "⚙️ Auto-update progress.csv - $(date '+%Y-%m-%d')"
+          git push
