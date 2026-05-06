@@ -1,8 +1,11 @@
 Problem Number,Problem Name,Difficulty,Status,Date Completed,Notes
 0001,Two Sum,Easy,Completed,2026-05-04,HashMap approach
+0002,Add Two Numbers,Medium,Completed,2026-05-05,Linked list addition
+0021,Merge Two Sorted Lists,Easy,Completed,2026-05-05,Two pointer merge
 0035,Search Insert Position,Easy,Completed,2026-05-04,Binary search
 0048,Rotate Image,Medium,Completed,2026-05-04,In-place rotation
 0058,Length of Last Word,Easy,Completed,2026-05-04,String manipulation
+0061,Rotate List,Medium,Completed,2026-05-05,Linked list rotation
 0066,Plus One,Easy,Completed,2026-05-04,Array increment
 0136,Single Number,Easy,Completed,2026-05-04,XOR bitwise operation
 0217,Contains Duplicate,Easy,Completed,2026-05-04,HashSet approach
