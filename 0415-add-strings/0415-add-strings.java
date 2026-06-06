@@ -7,9 +7,16 @@ class Solution {
         StringBuilder result = new StringBuilder();
 
         while(i >= 0 || j >= 0 || carry !=0){
-            int digit1 = (i >= 0) ? num1.charAt(i) - '0' : 0;
-            int digit2 = (j >= 0) ? num2.charAt(j) - '0' : 0;
 
+            int digit1 = 0;
+            int digit2 = 0;
+
+            if (i >= 0){
+                digit1 =  num1.charAt(i) - '0';
+            }
+            if ( j>= 0){
+                digit2 = num2.charAt(j) - '0';
+            }
             int sum = digit1 + digit2 + carry;
 
             result.append(sum % 10);
